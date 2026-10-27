@@ -4,10 +4,11 @@ import "./App.css";
 const CharacterModel = lazy(() => import("./components/Character"));
 const MainContainer = lazy(() => import("./components/MainContainer"));
 import { LoadingProvider } from "./context/LoadingProvider";
+import { NavigationProvider } from "./context/NavigationContext";
 
 const App = () => {
   return (
-    <>
+    <NavigationProvider>
       <LoadingProvider>
         <Suspense>
           <MainContainer>
@@ -17,7 +18,7 @@ const App = () => {
           </MainContainer>
         </Suspense>
       </LoadingProvider>
-    </>
+    </NavigationProvider>
   );
 };
 

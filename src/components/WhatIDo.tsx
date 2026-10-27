@@ -90,21 +90,21 @@ const WhatIDo = () => {
               <h3>DEVELOP</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                I build clean, responsive websites that look great and work smoothly
+                across all phones and desktops using modern HTML, CSS, and JavaScript.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
+                <div className="what-tags">Web Design</div>
+                <div className="what-tags">HTML5 & CSS3</div>
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">TypeScript</div>
+                <div className="what-tags">Responsive Design</div>
+                <div className="what-tags">UI Design</div>
+                <div className="what-tags">CSS Animations</div>
                 <div className="what-tags">Three.js</div>
-                <div className="what-tags">React</div>
-                <div className="what-tags">Css</div>
-                <div className="what-tags">Node.js</div>
-                <div className="what-tags">Next.js</div>
-                <div className="what-tags">Express.js</div>
-                <div className="what-tags">PHP</div>
-                <div className="what-tags">MySql</div>
+                <div className="what-tags">GSAP</div>
+                <div className="what-tags">Figma to Web</div>
+                <div className="what-tags">Web Optimization</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -131,19 +131,22 @@ const WhatIDo = () => {
               <h3>DESIGN</h3>
               <h4>Description</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae
+                I design interfaces, logos, brand visuals, mockups, and video
+                edits. The goal is simple: make the work easy to understand
+                and nice to look at.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Blender</div>
-                <div className="what-tags">Zbrush</div>
-                <div className="what-tags">UI Design</div>
-                <div className="what-tags">Motion</div>
-                <div className="what-tags">Rigging</div>
-                <div className="what-tags">3D Animation</div>
-                <div className="what-tags">Character Design</div>
-                <div className="what-tags">Modelling</div>
+                <div className="what-tags">UI/UX Design</div>
+                <div className="what-tags">Video Editing</div>
+                <div className="what-tags">Branding</div>
+                <div className="what-tags">Logo Design</div>
+                <div className="what-tags">Mockup Creation</div>
+                <div className="what-tags">Graphic Design</div>
+                <div className="what-tags">Wireframing</div>
+                <div className="what-tags">Motion Graphics</div>
+                <div className="what-tags">Prototyping</div>
+                <div className="what-tags">Poster Design</div>
               </div>
               <div className="what-arrow"></div>
             </div>

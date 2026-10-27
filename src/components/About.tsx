@@ -6,9 +6,9 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-          dolores numquam iusto Ratione earum ducimus autem id iure pariatur
-          dolorum quae maiores.
+          I'm Mayank Meena, also known as CYPHERR. I design websites and
+          interfaces, edit videos, and build web apps. I like making things
+          that look good and actually work.
         </p>
       </div>
     </div>

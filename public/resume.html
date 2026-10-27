@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayank Meena – Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 48px 52px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .name { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; }
+    .title { font-size: 14px; color: #555; font-weight: 400; margin-top: 4px; letter-spacing: 0.5px; }
+
+    .contact-info { text-align: right; font-size: 12px; color: #333; }
+    .contact-info a { color: #333; text-decoration: none; }
+    .contact-info .line { margin-bottom: 3px; }
+    .contact-info .line:last-child { margin-bottom: 0; }
+
+    /* Sections */
+    .section { margin-bottom: 22px; }
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 12px;
+    }
+
+    /* Summary */
+    .summary { color: #444; line-height: 1.6; }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px 16px;
+    }
+    .skill-group { }
+    .skill-label { font-weight: 600; font-size: 11.5px; margin-bottom: 3px; }
+    .skill-items { font-size: 12px; color: #555; }
+
+    /* Experience + Projects */
+    .entry { margin-bottom: 16px; }
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .entry-title { font-weight: 600; font-size: 13.5px; }
+    .entry-date { font-size: 11.5px; color: #666; white-space: nowrap; }
+    .entry-sub { font-size: 12px; color: #666; margin-bottom: 5px; }
+    .entry-bullets { list-style: none; padding: 0; }
+    .entry-bullets li {
+      padding-left: 14px;
+      position: relative;
+      color: #444;
+      margin-bottom: 3px;
+      font-size: 12.5px;
+    }
+    .entry-bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: #999;
+    }
+
+    /* Tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+    .tag {
+      background: #f2f2f2;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 11px;
+      color: #444;
+    }
+
+    /* Education */
+    .edu-entry { display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .edu-left .edu-degree { font-weight: 600; font-size: 13px; }
+    .edu-left .edu-school { color: #555; font-size: 12px; }
+    .edu-right { text-align: right; font-size: 12px; color: #666; }
+
+    /* Print */
+    @media print {
+      body { font-size: 12px; }
+      .page { padding: 32px 40px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <div>
+        <div class="name">Mayank Meena</div>
+        <div class="title">Web Designer &amp; Creative Developer &nbsp;|&nbsp; UI/UX &nbsp;|&nbsp; Video Editor</div>
+      </div>
+      <div class="contact-info">
+        <div class="line"><a href="mailto:cypherr894@gmail.com">cypherr894@gmail.com</a></div>
+        <div class="line"><a href="https://wa.me/917877128184">+91 7877128184 (WhatsApp)</a></div>
+        <div class="line"><a href="https://www.linkedin.com/in/mayank-meena-553b9236b/" target="_blank">linkedin.com/in/mayank-meena-553b9236b</a></div>
+        <div class="line">India</div>
+      </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+      <div class="section-title">Profile</div>
+      <p class="summary">
+        Web designer and visual creator specializing in UI/UX design, clean responsive websites, video editing, and motion graphics. I create intuitive interfaces and captivating media under the name CYPHERR.
+      </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <div class="skill-label">Web &amp; UI Design</div>
+          <div class="skill-items">HTML5, CSS3, JavaScript, Responsive Design, CSS Animations</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Design &amp; UI/UX</div>
+          <div class="skill-items">Figma, Adobe XD, UI/UX Design, Wireframing, Prototyping, Mockups</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Video &amp; Motion</div>
+          <div class="skill-items">Adobe Premiere Pro, After Effects, DaVinci Resolve, Motion Graphics</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Branding &amp; Visuals</div>
+          <div class="skill-items">Logo Design, Adobe Photoshop, Adobe Illustrator, Visual Identity</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">3D &amp; Motion Web</div>
+          <div class="skill-items">Three.js, WebGL, GSAP, Blender 3D</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Tools &amp; Workflow</div>
+          <div class="skill-items">Git, GitHub, Vercel, VS Code, npm</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">CYPHERR — Personal Portfolio Website</span>
+          <span class="entry-date">2026</span>
+        </div>
+        <div class="entry-sub">Three.js · GSAP · WebGL · HTML5 · CSS3</div>
+        <ul class="entry-bullets">
+          <li>Built a 3D portfolio with a character model, real-time animations, head tracking, and camera movement on scroll.</li>
+          <li>Added GSAP scroll effects, interactive work showcase, and dedicated case study detail pages.</li>
+          <li>Optimized visual presentation and smooth 60fps animations across devices.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Three.js</span><span class="tag">GSAP</span><span class="tag">WebGL</span><span class="tag">UI/UX</span><span class="tag">Web Design</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Campus Placement Portal UI</span>
+          <span class="entry-date">2025</span>
+        </div>
+        <div class="entry-sub">UI/UX Design · Figma · HTML5 · CSS3 · JavaScript</div>
+        <ul class="entry-bullets">
+          <li>Designed a clean, modern placement management system interface for universities — streamlining student applications and interview schedules.</li>
+          <li>Created comprehensive Figma wireframes, component design systems, and responsive layouts tested across mobile and desktop.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">UI/UX Design</span><span class="tag">Figma</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Cafe Plus Website</span>
+          <span class="entry-date">2025</span>
+        </div>
+        <div class="entry-sub">Web Design · HTML5 · CSS3 · JavaScript · CSS Animations</div>
+        <ul class="entry-bullets">
+          <li>Designed and built a responsive cafe website with animated menus, page transitions, and a mobile-first layout.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Web Design</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">UI/UX</span>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Campus Navigation Assistant</span>
+          <span class="entry-date">2024</span>
+        </div>
+        <div class="entry-sub">JavaScript · Geolocation API · Interactive Maps</div>
+        <ul class="entry-bullets">
+          <li>Built an interactive web-based campus map with geolocation, building search, and shortest-route visualization for students and visitors.</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">JavaScript</span><span class="tag">Maps</span><span class="tag">Geolocation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video & Branding Work -->
+    <div class="section">
+      <div class="section-title">Creative Work</div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Video Production &amp; Motion Graphics</span>
+          <span class="entry-date">2023 – Present</span>
+        </div>
+        <ul class="entry-bullets">
+          <li>Made short films, promo reels, and social media videos in Adobe Premiere Pro and After Effects.</li>
+          <li>Designed custom motion graphics, animated title sequences, and branded transitions for multiple clients.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <div class="entry-header">
+          <span class="entry-title">Brand Identity &amp; Logo Design</span>
+          <span class="entry-date">2023 – Present</span>
+        </div>
+        <ul class="entry-bullets">
+          <li>Made logos, color palettes, type choices, and simple style guides for brands.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="edu-entry">
+        <div class="edu-left">
+          <div class="edu-degree">Bachelor of Technology — Computer Science &amp; Engineering</div>
+          <div class="edu-school">Engineering College, Rajasthan, India</div>
+        </div>
+        <div class="edu-right">
+          <div>2022 – 2026</div>
+          <div>CGPA: 7.8/10</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

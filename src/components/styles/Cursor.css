@@ -13,6 +13,7 @@
   mix-blend-mode: difference;
   transition: top 0.3s ease-out, left 0.3s ease-out, width 0.3s ease-out,
     height 0.3s ease-out;
+  will-change: transform;
 }
 .cursor-icons {
   top: 10px;

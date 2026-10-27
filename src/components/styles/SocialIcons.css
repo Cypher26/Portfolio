@@ -81,6 +81,12 @@ div.resume-button span {
   width: 100%;
   z-index: 99999;
 }
+.whatsapp-icon {
+  transition: color 0.3s ease !important;
+}
+.whatsapp-icon:hover {
+  color: #25D366 !important;
+}
 @media only screen and (min-width: 900px) {
   .social-icons {
     display: flex;
