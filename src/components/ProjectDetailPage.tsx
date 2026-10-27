@@ -38,8 +38,8 @@ const getCategoryIcon = (id: CategoryId) => {
 };
 
 const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId }) => {
-  const { goToHome, goToAllWork, goToProject } = useNavigation();
-  const project = getProjectById(projectId);
+  const { goToHome, goToAllWork, goToProject } = useNavigation() as any;
+  const project = getProjectById(projectId) as any;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -78,8 +78,8 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId }) => {
     );
   }
 
-  const nextProject = getNextProject(project.id, project.categorySlug);
-  const prevProject = getPrevProject(project.id, project.categorySlug);
+  const nextProject = getNextProject(project.id, project.categorySlug as any);
+  const prevProject = getPrevProject(project.id, project.categorySlug as any);
 
   return (
     <div className="project-detail-wrapper">
@@ -115,14 +115,16 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId }) => {
         </div>
 
         <div className="topbar-right">
-          <button
-            className="topbar-nav-pill"
-            onClick={() => goToProject(nextProject.id)}
-            data-cursor="disable"
-            title={`Next in ${project.category}: ${nextProject.name}`}
-          >
-            Next Project <FaArrowRight />
-          </button>
+          {nextProject && (
+            <button
+              className="topbar-nav-pill"
+              onClick={() => goToProject(nextProject.id)}
+              data-cursor="disable"
+              title={`Next in ${(project as any).category}: ${nextProject.name}`}
+            >
+              Next Project <FaArrowRight />
+            </button>
+          )}
         </div>
       </nav>
 
@@ -204,7 +206,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId }) => {
             className="project-metrics-grid"
             aria-label="Key Project Metrics"
           >
-            {project.metrics.map((metric, idx) => (
+            {project.metrics.map((metric: any, idx: number) => (
               <div key={idx} className="metric-card">
                 <div className="metric-val">{metric.value}</div>
                 <div className="metric-lbl">{metric.label}</div>
@@ -251,7 +253,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId }) => {
             <h2 className="section-heading">Key Features & Elements</h2>
 
             <div className="features-grid">
-              {project.features.map((feat, index) => (
+              {project.features.map((feat: any, index: number) => (
                 <div key={index} className="feature-box">
                   <div className="feature-header">
                     <h3 className="feature-title">{feat.title}</h3>
@@ -270,7 +272,7 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId }) => {
           <h2 className="section-heading">Tools & Software Used</h2>
 
           <div className="tech-pills-wrap">
-            {project.techStack.map((tech) => (
+            {project.techStack.map((tech: string) => (
               <span key={tech} className="tech-pill">
                 <MdOutlineCheckCircle
                   style={{
@@ -287,45 +289,49 @@ const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId }) => {
 
         {/* Next / Previous Project Navigation */}
         <nav className="project-nav-footer" aria-label="Project Navigation">
-          <button
-            className="prev-project-btn"
-            onClick={() => goToProject(prevProject.id)}
-            data-cursor="disable"
-          >
-            <img
-              src={prevProject.image}
-              alt={prevProject.name}
-              className="nav-thumb"
-            />
-            <div>
-              <div className="nav-direction-label">← Previous Project</div>
-              <div className="nav-project-name">{prevProject.name}</div>
-            </div>
-          </button>
+          {prevProject && (
+            <button
+              className="prev-project-btn"
+              onClick={() => goToProject(prevProject.id)}
+              data-cursor="disable"
+            >
+              <img
+                src={prevProject.image}
+                alt={prevProject.name}
+                className="nav-thumb"
+              />
+              <div>
+                <div className="nav-direction-label">← Previous Project</div>
+                <div className="nav-project-name">{prevProject.name}</div>
+              </div>
+            </button>
+          )}
 
           <button
             className="all-projects-center-btn"
-            onClick={() => goToAllWork(project.categorySlug)}
+            onClick={() => goToAllWork((project as any).categorySlug)}
             data-cursor="disable"
           >
-            <IoGridOutline /> All {project.category}
+            <IoGridOutline /> All {(project as any).category}
           </button>
 
-          <button
-            className="next-project-btn"
-            onClick={() => goToProject(nextProject.id)}
-            data-cursor="disable"
-          >
-            <img
-              src={nextProject.image}
-              alt={nextProject.name}
-              className="nav-thumb"
-            />
-            <div>
-              <div className="nav-direction-label">Next Project →</div>
-              <div className="nav-project-name">{nextProject.name}</div>
-            </div>
-          </button>
+          {nextProject && (
+            <button
+              className="next-project-btn"
+              onClick={() => goToProject(nextProject.id)}
+              data-cursor="disable"
+            >
+              <img
+                src={nextProject.image}
+                alt={nextProject.name}
+                className="nav-thumb"
+              />
+              <div>
+                <div className="nav-direction-label">Next Project →</div>
+                <div className="nav-project-name">{nextProject.name}</div>
+              </div>
+            </button>
+          )}
         </nav>
 
         {/* Bottom CTA Banner */}

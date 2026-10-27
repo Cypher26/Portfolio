@@ -37,7 +37,7 @@ const WorkPage = () => {
     goToProject,
     currentCategoryFilter,
     setCategoryFilter,
-  } = useNavigation();
+  } = useNavigation() as any;
 
   const [searchQuery, setSearchQuery] = useState("");
 
